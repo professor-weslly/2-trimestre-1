@@ -6,12 +6,17 @@ const textoResultado= document.querrySelector(".texto-resultado");
 
 const perguntas= [
   {
-      enunciado: "Pergunta1",
+      enunciado: "Claus roubou no Paulistão?",
       alternativas:[
         {
-        texto: "alternativa1",
+        texto: "sim",
         afirmação: "alternativa2",
-      ]
+        }   
+        {
+        texto: "sim" 
+        afirmação: "afirmação",  
+        },
+          ]
   },
    {
       enunciado: "Pergunta2",
