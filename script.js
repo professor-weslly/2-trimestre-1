@@ -11,7 +11,7 @@ const perguntas= [
         {
         texto: "sim",
         afirmação: "alternativa2",
-        }   
+        },   
         {
         texto: "sim" 
         afirmação: "afirmação",  
@@ -19,17 +19,28 @@ const perguntas= [
           ]
   },
    {
-      enunciado: "Pergunta2",
+      enunciado: "Brasil hexa 2026?",
       alternativas:[
-        "alternativa1",
-        "alternativa2",
+        {
+        texto:"sim",
+        afirmação:"alternativa2",
+        },
+        {
+        texto:"não"
+        afirmação:"afirmação",
+        }
       ]
   },
    {
-      enunciado: "Pergunta3",
+   enunciado: "Palmeiras tem mundial?",
       alternativas:[
-        "alternativa1",
-        "alternativa2",
+        {
+        texto: "não",
+        afirmação: "alternativa2",
+        },   
+        {
+        texto: "não" 
+        afirmação: "afirmação", 
       ]
   },
    {
@@ -50,6 +61,8 @@ const perguntas= [
 
 let atual = 0;
 let perguntaAtual;
+let históriaFinal = "";
+
 
 function mostraPergunta() {
     perguntaAtual = perguntas[atual];
@@ -60,7 +73,13 @@ function mostraPergunta() {
 function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa;
+        botaoAlternativas.textContent = alternativa.texto;
+        botãoAlternativas.addEventListener("click", () => respostaSelecionada (alternativa));
+        function respostaSelecionada(opcaoSelecionada){
+          const afirmacoes = opcaoSelecionada.afirmacoes;
+          historiaFinal = afirmacoes ;
+          atual++;
+          mostraPergunta();
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
