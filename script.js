@@ -65,8 +65,13 @@ let históriaFinal = "";
 
 
 function mostraPergunta() {
+    if(atual >= perguntas.lenght)}
+  mostraResultado();
+  return;
+}
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+      
     mostraAlternativas();
 }
 
@@ -77,9 +82,13 @@ function mostraAlternativas() {
         botãoAlternativas.addEventListener("click", () => respostaSelecionada (alternativa));
         function respostaSelecionada(opcaoSelecionada){
           const afirmacoes = opcaoSelecionada.afirmacoes;
-          historiaFinal = afirmacoes ;
+          historiaFinal = afirmacoes +"";
           atual++;
           mostraPergunta();
+        }
+        function mostraResultado(){
+          caixaPerguntas.textContent = "";
+        }
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
