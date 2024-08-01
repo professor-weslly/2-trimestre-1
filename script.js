@@ -44,21 +44,31 @@ const perguntas= [
       ]
   },
    {
-      enunciado: "Pergunta4",
-      alternativas:[
-        "alternativa1",
-        "alternativa2",
+      enunciado: "Santos o maior?",
+       alternativas:[
+        {
+        texto: "sim",
+        afirmação: "alternativa2",
+        },   
+        {
+        texto: "sim" 
+        afirmação: "afirmação", 
       ]
   },
    {
-      enunciado: "Pergunta5",
+      enunciado: "Ney no santástico",
       alternativas:[
-        "alternativa1",
-        "alternativa2",
+        {
+        texto: "sim",
+        afirmação: "alternativa2",
+        },   
+        {
+        texto: "sim" 
+        afirmação: "afirmação", 
       ]
   },
-  ];
-
+   {
+     
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
