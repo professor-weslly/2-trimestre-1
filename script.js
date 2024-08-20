@@ -6,7 +6,7 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Santos é o maior time do mundo?"
+        enunciado: "Santos é o maior time do mundo?",
         alternativas: [
             {
                 texto: "Isso é óbvio.",
@@ -105,7 +105,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "Abra seus olhos...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
